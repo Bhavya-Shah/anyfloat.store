@@ -15,7 +15,7 @@ export class BookService {
     return this.http.get<Book[]>(this.booksURL)
       .pipe(
         tap(resData => {
-          this.books = resData; // intialize books array
+          this.books = resData // intialize books array
         })
       );
   }

@@ -8,7 +8,6 @@ import { Book } from 'src/app/catalog-page/models/book.model';
 })
 export class BookItemComponent implements OnInit {
   soldOut: boolean = false
-  booksURL: string = "assets/json/books.json"
   @Input() book: Book;
 
   constructor() { 

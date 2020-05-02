@@ -1,18 +1,19 @@
 <!-- my first page -->
-<app-header></app-header>
-<div class="container-fluid">
+<!-- <app-header></app-header> -->
+<!-- <div class="container-fluid">
     <div class="container">
-        <div class="w-100 p-3 shadow text-white section animated fadeIn">
-            <h5>Books</h5>
-            <div class="pb-2 mb-3" style="overflow-x: scroll; overflow-y: hidden;">
-                <app-book-list class="d-flex animated fadeInRightBig"></app-book-list>
-            </div>
-            <h5>Movies</h5>
-            <div>
-                <div class="pb-2 mb-3" style="overflow-x: scroll;">
-                    <!-- movies-list -->
-                </div>
-            </div>
-        </div>
+        <div class="w-100 p-3 shadow text-white section animated fadeIn"> -->
+<h3 class="mb-3 p-1" style="background-color: rgba(69,123,157,0.16);">{{title}}</h3>
+<h5>Books</h5>
+<div class="pb-2 mb-3" style="overflow-x: scroll; overflow-y: hidden;">
+    <app-book-list class="d-flex animated bounceInRight slow"></app-book-list>
+</div>
+<h5>Movies</h5>
+<div>
+    <div class="pb-2 mb-3" style="overflow-x: scroll; overflow-y: hidden;">
+        <app-movie-list class="d-flex animated bounceInLeft"></app-movie-list>
     </div>
 </div>
+<!-- </div>
+    </div>
+</div> -->
