@@ -1,1 +1,13 @@
-<p>book-item works!</p>
+<div class="image-size position-relative">
+    <img class="h-100 w-100" src="{{book.image}}">
+    <div class="position-absolute details animated fadeInUp">
+        <p>{{book.name}}</p>
+        <!-- <p>{{book.genre}}</p> -->
+        <p>{{book.year}}</p>
+        <p>{{book.price}}</p>
+    </div>
+    <div class="position-absolute animated fadeIn buttons">
+        <button class="btn btn-outline-warning rounded-0 btn-sm">Add to wishlist</button>
+        <button class="btn btn-outline-primary rounded-0 btn-sm">Add to cart</button>
+    </div>
+</div>

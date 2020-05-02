@@ -2,7 +2,7 @@ export class Book{
     public id: number
     public name: string
     public image: string
-    public year_of_release: number
+    public year: number
     public price: number
     public quantity: number
     public writer: string
