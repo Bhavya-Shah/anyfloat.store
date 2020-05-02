@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "name": "Free Your Mind",
+    "image": "../../../../../assets/images/movies/free-your-mind.jpg",
+    "genre": "Story-telling",
+    "year": 2015,
+    "price": 299,
+    "quantity": 0,
+    "director": "M.P Neary",
+    "imdb": "",
+    "trailer": "",
+    "cast": {
+        "hero": "",
+        "heroine": ""
+    }
+}]

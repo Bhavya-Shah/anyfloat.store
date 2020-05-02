@@ -1,0 +1,21 @@
+<div class="image-size position-relative">
+    <img class="h-100 w-100" src="{{movie.image}}">
+    <div class="position-absolute details animated fadeInUp">
+        <p>{{movie.name}}</p>
+        <small>{{movie.genre}}</small>
+        <small>{{movie.year}}</small>
+    </div>
+    <div class="position-absolute animated fadeIn buttons">
+        <div>
+            <small style="opacity: 60%">Qty. {{movie.quantity}}</small>
+            <button class="btn btn-outline-warning rounded-0 btn-sm mr-1">Add to wishlist</button>
+        </div>
+        <div>
+            <small style="opacity: 87%">&#8377; {{movie.price}}</small>
+            <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 btn-sm">Add to cart</button>
+        </div>
+        <ng-template #elseBlock>
+            <button class="btn btn-danger rounded-0 btn-sm disabled" style="cursor: not-allowed;">Sold out item</button>
+        </ng-template>
+    </div>
+</div>
