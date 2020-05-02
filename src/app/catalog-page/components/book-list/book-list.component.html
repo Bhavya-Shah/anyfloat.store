@@ -1,1 +1,1 @@
-<app-book-item *ngFor="let book of books" [book]="book"></app-book-item>
+<app-book-item *ngFor="let book of books" [book]="book" (click)="goToDescription()" style="cursor: pointer;"></app-book-item>

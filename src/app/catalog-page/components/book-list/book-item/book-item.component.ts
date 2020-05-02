@@ -1,7 +1,5 @@
-import { Component, OnInit,Input, ViewChild, HostListener } from '@angular/core';
-import {BookService} from '../../../services/book.service';
+import { Component, OnInit,Input } from '@angular/core';
 import { Book } from 'src/app/catalog-page/models/book.model';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-book-item',
@@ -9,23 +7,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./book-item.component.sass']
 })
 export class BookItemComponent implements OnInit {
-  
-  @ViewChild('img') img
+  soldOut: boolean = false
   booksURL: string = "assets/json/books.json"
   @Input() book: Book;
 
-  constructor(private bookService: BookService,
-    private http: HttpClient) { 
-      // this.http.get(this.booksURL).subscribe(
-      //   response=>{
-      //     this.books = response
-      //     console.log(response)
-      //   }
-      // )
+  constructor() { 
   }
 
   ngOnInit(): void {
-    // this.bookService.getBooks()
+    if(this.book.quantity == 0){
+      this.soldOut = true
+    }
     console.log(this.book);
   }
 }

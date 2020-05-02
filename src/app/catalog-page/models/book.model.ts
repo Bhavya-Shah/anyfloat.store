@@ -1,5 +1,6 @@
 export class Book{
     public id: number
+    public genre: string
     public name: string
     public image: string
     public year: number
