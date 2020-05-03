@@ -7,7 +7,7 @@ export class Movie {
     public price: number
     public quantity: number
     public director: string
-    public imdb: number
+    public imdb: string
     public trailer: string
     public cast: object
 }

@@ -20,9 +20,4 @@ export class BookListComponent implements OnInit {
       }
     );
   }
-
-  goToDescription(){
-    
-  }
-
 }

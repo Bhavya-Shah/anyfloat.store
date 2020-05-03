@@ -6,12 +6,12 @@
         <small>{{movie.year}}</small>
     </div>
     <div class="position-absolute animated fadeIn buttons">
-        <div>
+        <div class="text-left">
             <small style="opacity: 60%">Qty. {{movie.quantity}}</small>
             <button class="btn btn-outline-warning rounded-0 btn-sm mr-1">Add to wishlist</button>
         </div>
-        <div>
-            <small style="opacity: 87%">&#8377; {{movie.price}}</small>
+        <div class="text-right">
+            <small style="opacity: 87%;">&#8377; {{movie.price}}</small>
             <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 btn-sm">Add to cart</button>
         </div>
         <ng-template #elseBlock>
