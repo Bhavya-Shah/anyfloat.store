@@ -1,22 +1,34 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {tap} from 'rxjs/operators';
 import { Movie } from '../models/movie.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-  moviesUrl: string = "assets/json/movies.json"
+
   movies: Movie[] = []
-  constructor(private http: HttpClient) { }
+  movieChanged = new Subject<Movie[]>()
+
+  constructor() { }
+
+  setMovies(movies: Movie[]) {
+    this.movies = movies
+    this.movieChanged.next(this.movies.slice())
+  }
   
-  getMovies(){
-    return this.http.get<Movie[]>(this.moviesUrl)
-    .pipe(
-      tap(resData=>{
-        this.movies = resData // intialize movies array
-      })
-    )
+  getMovies(): Movie[]{
+    return this.movies.slice()
+  }
+  
+  getElementById(Id: number) : Movie{
+    let movie: Movie
+    this.movies.forEach(movieItem=>{
+      if(movieItem.id == Id){
+        movie = movieItem
+        return movie
+      }
+    })
+    return movie
   }
 }

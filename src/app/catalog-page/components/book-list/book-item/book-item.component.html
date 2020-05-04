@@ -1,18 +1,20 @@
 <div class="image-size position-relative">
-    <img class="h-100 w-100" src="{{book.image}}">
-    <div class="position-absolute details animated fadeInUp">
-        <p>{{book.name}}</p>
-        <small>{{book.genre}}</small>
-        <small>{{book.year}}</small>
-    </div>
+    <a [routerLink]="['/details', 'book', book.id]">
+        <img class="h-100 w-100" src="{{book.image}}">
+        <div class="position-absolute details animated fadeInUp">
+            <p>{{book.name}}</p>
+            <small>{{book.genre}}</small>
+            <small>{{book.year}}</small>
+        </div>
+    </a>
     <div class="position-absolute animated fadeIn buttons">
         <div class="text-left">
             <small style="opacity: 60%">Qty. {{book.quantity}}</small>
-            <button class="btn btn-outline-warning rounded-0 btn-sm mr-1">Add to wishlist</button>
+            <button class="btn btn-outline-warning rounded-0 btn-sm mr-1" (click)="addToWishlist(book)">Add to wishlist</button>
         </div>
         <div class="text-right">
             <small style="opacity: 87%">&#8377; {{book.price}}</small>
-            <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 btn-sm">Add to cart</button>
+            <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 btn-sm" (click)="addToCart(book)">Add to cart</button>
         </div>
         <ng-template #elseBlock>
             <button class="btn btn-danger rounded-0 btn-sm disabled" style="cursor: not-allowed;">Sold out item</button>

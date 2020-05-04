@@ -1,23 +1,35 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {tap} from 'rxjs/operators';
 import { Book } from '../models/book.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-  booksURL: string = "assets/json/books.json"
-  books: Book[] = []
-  constructor(private http: HttpClient) { }
 
-  getBooks() {
-    return this.http.get<Book[]>(this.booksURL)
-      .pipe(
-        tap(resData => {
-          this.books = resData // intialize books array
-        })
-      );
+  private books: Book[] = []
+  booksChanged = new Subject<Book[]>();
+
+  constructor() { }
+
+  setBooks(books: Book[]){
+    this.books = books
+    this.booksChanged.next(this.books.slice()) 
   }
 
+  getBooks(): Book[]{
+    return this.books.slice()
+  }
+
+  getElementById(Id: number): Book {
+    let book: Book
+    this.books.forEach((bookItem)=>{
+      if(bookItem.id == Id)
+      {
+        book = bookItem
+        return book
+      }
+    })
+    return book
+  }
 }

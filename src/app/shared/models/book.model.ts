@@ -1,4 +1,4 @@
-export class Movie {
+export class Book{
     public id: number
     public genre: string
     public name: string
@@ -6,8 +6,7 @@ export class Movie {
     public year: number
     public price: number
     public quantity: number
-    public director: string
-    public imdb: string
-    public trailer: string
-    public cast: string
+    public writer: string
+    public preview: string
+    public pages: number
 }

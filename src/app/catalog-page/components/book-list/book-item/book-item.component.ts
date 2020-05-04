@@ -7,6 +7,7 @@ import { Book } from 'src/app/catalog-page/models/book.model';
   styleUrls: ['./book-item.component.sass']
 })
 export class BookItemComponent implements OnInit {
+
   soldOut: boolean = false
   @Input() book: Book;
 
@@ -18,6 +19,14 @@ export class BookItemComponent implements OnInit {
       this.soldOut = true
     }
     console.log(this.book);
+  }
+
+  addToCart(book:Book){
+    console.log("added to cart!")
+  }
+
+  addToWishlist(book:Book){
+    console.log("added into wishlist!")
   }
 }
 

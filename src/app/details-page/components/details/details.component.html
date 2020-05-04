@@ -1,0 +1,6 @@
+<div *ngIf="book; else elseBlock">
+    {{book.id}}<br> {{book.name}}
+</div>
+<ng-template #elseBlock>
+    {{movie.id}}<br>{{movie.name}}
+</ng-template>
