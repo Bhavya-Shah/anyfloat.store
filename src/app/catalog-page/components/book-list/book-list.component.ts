@@ -20,7 +20,6 @@ export class BookListComponent implements OnInit, OnDestroy {
     this.booksSub = this.bookService.booksChanged.subscribe(
       (books: Book[])=>{
         this.books = books
-        console.log(this.books)
       }
     )
    }

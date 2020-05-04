@@ -18,6 +18,14 @@ export class MovieItemComponent implements OnInit {
       this.soldOut = true
     }
   }
+
+  addToCart(movie: Movie){
+    console.log("added to cart!")
+  }
+
+  addToWishlist(movie: Movie){
+    console.log("added into wishlist!")
+  }
 }
 
 

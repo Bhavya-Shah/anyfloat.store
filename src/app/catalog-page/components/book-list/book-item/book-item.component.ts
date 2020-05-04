@@ -18,7 +18,6 @@ export class BookItemComponent implements OnInit {
     if(this.book.quantity == 0){
       this.soldOut = true
     }
-    console.log(this.book);
   }
 
   addToCart(book:Book){
