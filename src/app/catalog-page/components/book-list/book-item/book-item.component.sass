@@ -6,45 +6,37 @@
 
 .image-size img
     object-fit: cover
+    cursor: pointer
 
 .details
     top: 5px
     left: 8px
     display: none
+    cursor: pointer
 
+.details p
+    font-size: smaller
+    opacity: 87%
+    margin-bottom: 0.5rem
+    
 .buttons
     bottom: 2px
     left: 8px
     right: 8px
     display: none
-
-.btn 
-    font-weight: 900  
-
-p   
-    margin-bottom: 0.5rem
+    cursor: pointer
 
 .buttons button
-     font-size: xx-small
-
-.details p
-    font-size: smaller
-    opacity: 87%
+    font-size: xx-small
+    font-weight: 900
 
 .image-size:hover img
     transition: all 0.5s ease
     opacity: 0.16
-    cursor: pointer
-
 
 .image-size:hover .details
     display: flex
     flex-direction: column
 
-wishlist-cart-buttons:hover
-    display: flex    
-// .image-size:hover .details
-//     display: block
-        
 .image-size:hover .buttons
     display: flex
