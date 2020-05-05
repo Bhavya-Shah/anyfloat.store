@@ -11,3 +11,4 @@ export class Movie {
     public trailer: string
     public cast: string
 }
+

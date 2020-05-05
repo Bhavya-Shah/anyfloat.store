@@ -1,41 +1,72 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ElementRef } from '@angular/core';
 import { Book } from 'src/app/shared/models/book.model';
 import { Subject } from 'rxjs';
+import { Movie } from 'src/app/shared/models/movie.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WishlistService {
-  
-  private wishlist: Book[] = [];
-  wishlistChanged = new Subject<Book[]>();
-  
+
+  private bookWishlist: Book[] = []
+  private movieWishlist: Movie[] = []
+  bookWishlistChanged = new Subject<Book[]>()
+  movieWishlistChanged = new Subject<Movie[]>()
+
+
   constructor() { }
 
-  setWishlistFromLocalstorage(books: Book[]){
-    this.wishlist = books
-    this.wishlistChanged.next(this.wishlist.slice())
+  setBookWishlistFromLocalStorage(books: Book[]){
+    this.bookWishlist = books
+    this.bookWishlistChanged.next(this.bookWishlist.slice())
   }
 
-  setWishlist(book:Book){
-    this.wishlist.push(book)
-    this.wishlistChanged.next(this.wishlist.slice())
-    localStorage.setItem("wishlist", JSON.stringify(this.wishlist))
+  setMovieWishlistFromLocalStorage(movies: Movie[]){
+    this.movieWishlist = movies
+    this.movieWishlistChanged.next(this.movieWishlist.slice())
   }
 
-  getWishlist(): Book[]{
-    return this.wishlist.slice()
+  setBookWishlist(book:Book){
+    this.bookWishlist.push(book)
+    this.bookWishlistChanged.next(this.bookWishlist.slice())
+    localStorage.setItem("BookWishlist", JSON.stringify(this.bookWishlist))
+  }
+
+  setMovieWishlist(movie:Movie){
+    this.movieWishlist.push(movie)
+    this.movieWishlistChanged.next(this.movieWishlist.slice())
+    localStorage.setItem("MovieWishlist", JSON.stringify(this.movieWishlist))
+  }
+
+  getBookWishlist(): Book[]{
+    return this.bookWishlist.slice()
+  }
+
+  getMovieWishlist(): Movie[]{
+    return this.movieWishlist.slice()
   }
 
   /*first splice the wishlist
   second update the Subject
   third return the remaining array*/
-  removeFromWishlist(book: Book): Book[] {
-    let index = this.wishlist.indexOf(book)
-    this.wishlist.splice(index, 1)
-    this.wishlistChanged.next(this.wishlist.slice())
+  removeFromBookWishlist(book: Book): Book[] {
+    let index = this.bookWishlist.indexOf(book)
+    this.bookWishlist.splice(index, 1)
+    this.bookWishlistChanged.next(this.bookWishlist.slice())
     //removing from localstoarage
-    localStorage.setItem("wishlist", JSON.stringify(this.wishlist))
-    return this.wishlist.slice()
+    localStorage.setItem("BookWishlist", JSON.stringify(this.bookWishlist))
+    return this.bookWishlist.slice()
+  }
+
+  /*first splice the movieWishlist
+  second update the Subject
+  third return the remaining array*/
+  removeFromMovieWishlist(movie: Movie): Movie[]{
+    let index = this.movieWishlist.indexOf(movie)
+    this.movieWishlist.splice(index, 1)
+    this.movieWishlistChanged.next(this.movieWishlist.slice())
+    //removing from localstoarage
+    localStorage.setItem("MovieWishlist", JSON.stringify(this.movieWishlist))
+    return this.movieWishlist.slice()
   }
 }

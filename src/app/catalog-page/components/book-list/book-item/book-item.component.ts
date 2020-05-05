@@ -28,10 +28,10 @@ export class BookItemComponent implements OnInit {
   /*first check if the item is
   already added in the wishlist*/
   addToWishlist(book: Book) {
-    let wishlist = this.wishlistService.getWishlist()
+    let bookWishlist = this.wishlistService.getBookWishlist()
 
-    if(!wishlist.some((item)=>item.id == book.id)){
-      this.wishlistService.setWishlist(book)
+    if(!bookWishlist.some((item)=>item.id == book.id)){
+      this.wishlistService.setBookWishlist(book)
       console.log("Item added into wishlist!")
     }
     else{

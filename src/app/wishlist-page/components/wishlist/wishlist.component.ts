@@ -14,12 +14,12 @@ export class WishlistComponent implements OnInit {
   constructor(private wishlistService: WishlistService) { }
 
   ngOnInit(): void {
-    this.wishlist = JSON.parse(localStorage.getItem("wishlist"))
-    this.wishlistService.setWishlistFromLocalstorage(this.wishlist)
+    // this.wishlist = JSON.parse(localStorage.getItem("wishlist"))
+    // this.wishlistService.setWishlistFromLocalstorage(this.wishlist)
   }
 
-  removeItem(book: Book) {
-    this.wishlist = this.wishlistService.removeFromWishlist(book)
-    console.log("Item removed successfully!")
-  }
+  // removeItem(book: Book) {
+  //   this.wishlist = this.wishlistService.removeFromWishlist(book)
+  //   console.log("Item removed successfully!")
+  // }
 }

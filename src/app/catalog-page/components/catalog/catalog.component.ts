@@ -12,7 +12,6 @@ export class CatalogComponent implements OnInit, OnDestroy {
   title = "Catalog"
   bookSub: Subscription
   movieSub: Subscription
-  
   constructor(private data: DataService) { }
 
   ngOnInit(): void {

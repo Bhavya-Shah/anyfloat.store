@@ -1,0 +1,4 @@
+<div *ngFor="let item of bookWishlist">
+    {{item.id}} {{item.name}}
+    <button class="btn btn-outline-danger btn-sm" (click)="removeItem(item)">Remove</button>
+</div>
