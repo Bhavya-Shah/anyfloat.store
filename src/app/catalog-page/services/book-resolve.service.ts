@@ -1,6 +1,6 @@
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Observable, from } from 'rxjs';
+import { Observable } from 'rxjs';
 import { BookService } from './book.service';
 import { Book } from '../models/book.model';
 import { DataService } from 'src/app/shared/services/data.service';
