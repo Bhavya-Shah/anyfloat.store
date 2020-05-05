@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { MovieService } from 'src/app/catalog-page/services/movie.service';
 import { Movie } from '../models/movie.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class DataService {
     
     private booksURL: string = "assets/json/books.json"
     private moviesUrl: string = "assets/json/movies.json"
+    wishlist: Observable<Book>
 
     constructor(private bookService: BookService,
         private http:HttpClient,

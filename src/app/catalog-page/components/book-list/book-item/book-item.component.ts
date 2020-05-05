@@ -1,5 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Book } from 'src/app/catalog-page/models/book.model';
+import { WishlistService } from 'src/app/wishlist-page/services/wishlist.service';
 
 @Component({
   selector: 'app-book-item',
@@ -11,21 +12,30 @@ export class BookItemComponent implements OnInit {
   soldOut: boolean = false
   @Input() book: Book;
 
-  constructor() { 
+  constructor(private wishlistService: WishlistService) {
   }
 
   ngOnInit(): void {
-    if(this.book.quantity == 0){
+    if (this.book.quantity == 0) {
       this.soldOut = true
     }
   }
 
-  addToCart(book:Book){
+  addToCart(book: Book) {
     console.log("added to cart!")
   }
 
-  addToWishlist(book:Book){
-    console.log("added into wishlist!")
+  /*first check if the item is
+  already added in the wishlist*/
+  addToWishlist(book: Book) {
+    let wishlist = this.wishlistService.getWishlist()
+
+    if(!wishlist.some((item)=>item.id == book.id)){
+      this.wishlistService.setWishlist(book)
+      console.log("Item added into wishlist!")
+    }
+    else{
+      console.log("Item Exists in wishlist!")
+    }
   }
 }
-

@@ -1,1 +1,4 @@
-<p>wishlist works!</p>
+<div *ngFor="let item of wishlist">
+    {{item.id}} {{item.name}}
+    <button class="btn btn-outline-danger btn-sm" (click)="removeItem(item)">Remove</button>
+</div>

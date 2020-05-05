@@ -1,7 +1,11 @@
 <div class="container-fluid shadow header animated fadeIn faster">
     <!-- <div class="container h-100"> -->
-    <div class="d-flex h-100 align-items-center h-100">
-        <span class="text-white" style="font-size: 1.2rem;">{{title}}</span>
+    <div class="d-flex h-100 align-items-center justify-content-between">
+        <a class="p-0 animated fadeInLeft" [routerLink]="['/']"><span class="text-white" style="font-size: 1.2rem;">{{title}}</span></a>
+        <div class="animated fadeInRight">
+            <a [routerLink]="['/wishlist']" class="text-white">Wishlist</a>
+            <a [routerLink]="['/cart']" class="ml-3 text-white">Cart</a>
+        </div>
         <!-- add wishlist and cart icons or links here use animated fadeInRight-->
     </div>
     <!-- </div> -->
