@@ -9,4 +9,6 @@ export class Book{
     public writer: string
     public preview: string
     public pages: number
+    public ratings: number
+    public count: number
 }

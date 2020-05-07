@@ -10,4 +10,5 @@ export class Movie {
     public imdb: string
     public trailer: string
     public cast: string
+    public count: number
 }
