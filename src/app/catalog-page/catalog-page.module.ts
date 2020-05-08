@@ -22,9 +22,11 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
-  ]
+    CommonModule,
+  ],
+  // bootstrap:[CatalogComponent],
+  // providers: [CartService]
 })
 
 export class CatalogPageModule{
- }
+}
