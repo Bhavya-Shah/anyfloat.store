@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
 import { Subscription } from 'rxjs';
+import { BookService } from '../../services/book.service';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-catalog',
@@ -10,17 +12,25 @@ import { Subscription } from 'rxjs';
 export class CatalogComponent implements OnInit, OnDestroy {
 
   title = "Catalog"
-  bookSub: Subscription
-  movieSub: Subscription
-  constructor(private data: DataService) { }
+  bookSub: Subscription[] = []
+  movieSub: Subscription[] =[]
+  constructor(
+    private data: DataService,
+    private bookService: BookService,
+    private movieService: MovieService
+  ) { }
 
   ngOnInit(): void {
-    this.bookSub = this.data.getBooksFromLocalJsonFile().subscribe()
-    this.movieSub = this.data.getMoviesFromLocalJsonFile().subscribe()
+    if(this.bookService.getBooks().length === 0) {
+      this.bookSub.push(this.data.getBooksFromLocalJsonFile().subscribe())
+    }
+    if(this.movieService.getMovies().length === 0){
+      this.movieSub.push(this.data.getMoviesFromLocalJsonFile().subscribe())
+    }
   }
 
   ngOnDestroy(){
-    this.bookSub.unsubscribe()
-    this.movieSub.unsubscribe()
+    this.bookSub.forEach(item => item.unsubscribe())
+    this.movieSub.forEach(item=> item.unsubscribe())
   }
 }
