@@ -14,10 +14,11 @@
         </div>
         <div class="text-right">
             <small style="opacity: 87%;">&#8377; {{movie.price}}</small>
-            <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 btn-sm" (click)="addToCart(movie)">Add to cart</button>
+            <button *ngIf="outOfStock !=true; else elseBlock" class="btn btn-outline-primary rounded-0 btn-sm" (click)="addToCart(movie)">Add to cart</button>
         </div>
         <ng-template #elseBlock>
-            <button class="btn btn-danger rounded-0 btn-sm disabled" style="cursor: not-allowed;">Sold out item</button>
+            <div class="btn btn-sm rounded-0 btn-danger p-0" style="width: 58px; height: 36px; padding: 2px !important; line-height: 0.8rem;">
+                <span style="font-size: 9px;">Out of Stock</span></div>
         </ng-template>
     </div>
 </div>

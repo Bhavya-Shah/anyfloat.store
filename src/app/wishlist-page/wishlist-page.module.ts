@@ -10,7 +10,10 @@ const routes: Routes=[
 ]; 
 
 @NgModule({
-  declarations: [WishlistComponent, BookWishlistComponent, MovieWishlistComponent],
+  declarations: [WishlistComponent, 
+  BookWishlistComponent, 
+  MovieWishlistComponent],
+
   imports: [
     RouterModule.forChild(routes),   
     CommonModule

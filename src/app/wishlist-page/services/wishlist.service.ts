@@ -1,4 +1,4 @@
-import { Injectable, ElementRef } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Book } from 'src/app/shared/models/book.model';
 import { Subject } from 'rxjs';
 import { Movie } from 'src/app/shared/models/movie.model';
@@ -10,8 +10,8 @@ export class WishlistService {
 
   private bookWishlist: Book[] = []
   private movieWishlist: Movie[] = []
-  bookWishlistChanged = new Subject<Book[]>()
-  movieWishlistChanged = new Subject<Movie[]>()
+  bookWishlistChanged: Subject<Book[]> = new Subject<Book[]>()
+  movieWishlistChanged:Subject<Movie[]> = new Subject<Movie[]>()
 
 
   constructor() { }
@@ -50,26 +50,18 @@ export class WishlistService {
     return this.movieWishlist.slice()
   }
 
-  /*first splice the wishlist
-  second update the Subject
-  third return the remaining array*/
   removeFromBookWishlist(book: Book): Book[] {
     let index = this.bookWishlist.indexOf(book)
     this.bookWishlist.splice(index, 1)
     this.bookWishlistChanged.next(this.bookWishlist.slice())
-    //removing from localstoarage
     localStorage.setItem("BookWishlist", JSON.stringify(this.bookWishlist))
     return this.bookWishlist.slice()
   }
 
-  /*first splice the movieWishlist
-  second update the Subject
-  third return the remaining array*/
   removeFromMovieWishlist(movie: Movie): Movie[]{
     let index = this.movieWishlist.indexOf(movie)
     this.movieWishlist.splice(index, 1)
     this.movieWishlistChanged.next(this.movieWishlist.slice())
-    //removing from localstoarage
     localStorage.setItem("MovieWishlist", JSON.stringify(this.movieWishlist))
     return this.movieWishlist.slice()
   }

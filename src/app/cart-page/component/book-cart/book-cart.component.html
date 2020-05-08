@@ -1,0 +1,17 @@
+<div *ngFor="let book of books">
+    <div *ngIf="book.count>0">
+        <div class="row mb-4">
+            <div class="col-12 col-sm-6 col-md-10">
+                <h5 class="m-0">{{book.name}}({{book.year}})</h5>
+                <small>by {{book.writer}}</small><br><br>
+                <p class="m-0">Type: Book</p>
+                <p class="m-0">Genre: {{book.genre}}</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-2 text-right">
+                <h4>&#8377;&nbsp;&nbsp;{{book.price}}</h4>
+                <p>Qty:{{book.count}}</p>
+                <button class="btn btn-outline-danger btn-sm" (click)="removeItem(book)">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

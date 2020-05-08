@@ -1,0 +1,48 @@
+<div class="container-fluid position-relative">
+    <div class="w-100 px-5 py-3 shadow text-white section">
+        <h3 class="mb-3">{{title}}</h3>
+        <div class="pb-2 mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <app-book-cart></app-book-cart>
+                    <app-movie-cart></app-movie-cart>
+                </div>
+                <div class="col-md-6">
+                    <form class="form-surface" (ngSubmit)="onSubmit(user)" #user="ngForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control rounded-0" type="text" name="name" id="name" minlength="3" placeholder="name" ngModel #name="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input class="form-control rounded-0" type="email" name="email" id="email" placeholder="email" ngModel #email="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="upi">UPI Id</label>
+                            <input class="form-control rounded-0" type="text" name="upi" id="upi" placeholder="upi id" ngModel #upi="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="street">Street</label>
+                            <input class="form-control rounded-0" type="text" name="street" id="street" minlength="3" placeholder="street" ngModel #street="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">City</label>
+                            <input class="form-control rounded-0" type="text" name="city" id="city" minlength="3" placeholder="city" ngModel #city="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipcode">Zipcode</label>
+                            <input class="form-control rounded-0" type="number" name="zipcode" id="zipcode" minlength="5" maxlength="7" placeholder="zipcode" ngModel #zipcode="ngModel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input class="form-control rounded-0" type="text" name="country" id="country" minlength="3" placeholder="country" ngModel #country="ngModel" required>
+                        </div>
+                        <div class="form-group text-right">
+                            <input class="btn rounded-0" type="submit" value="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieItemComponent } from './components/movie-list/movie-item/movie-item.component';
 
 const routes: Routes = [
-  {path: '', component: CatalogComponent},
+  {path: '', component: CatalogComponent}
 ];
 
 @NgModule({
@@ -22,7 +22,7 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule,
+    CommonModule
   ]
 })
 

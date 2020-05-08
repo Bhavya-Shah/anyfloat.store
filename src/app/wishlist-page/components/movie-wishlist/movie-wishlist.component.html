@@ -1,4 +1,30 @@
 <div *ngFor="let item of movieWishlist">
-    {{item.id}} {{item.name}}
-    <button class="btn btn-outline-danger btn-sm" (click)="removeItem(item)">Remove</button>
+    <div class="row mb-4">
+        <div class="col-6 col-sm-3 col-md-2">
+            <img class="w-100 h-100" src="{{item.image}}" alt="{{item.name}}" style="object-fit: cover;">
+        </div>
+        <div class="col-6 col-sm-6 col-md-7">
+            <h5 class="m-0">{{item.name}}({{item.year}})</h5>
+            <small>by: {{item.director}}</small><br><br>
+            <p class="m-0">Genre: {{item.genre}}</p>
+            <p class="m-0">IMDb: {{item.imdb}}</p>
+        </div>
+        <div class="col-12 col-sm-3 col-md-3">
+            <h4>&#8377;&nbsp;&nbsp;{{item.price}}</h4>
+            <button class="btn btn-outline-danger btn-block btn-sm" (click)="removeItem(item)">Remove</button>
+            <button *ngIf="item.quantity !=0; else elseBlock" class="btn btn-outline-primary btn-block rounded-0 btn-sm" (click)="addToCart(item)">Add to cart</button>
+            <ng-template #elseBlock>
+                <div class="btn btn-sm rounded-0 btn-block btn-danger" style="cursor: not-allowed;">
+                    <span>Out of Stock</span></div>
+            </ng-template>
+        </div>
+    </div>
 </div>
+<div *ngIf="movieWishlist == null; else elseBlock">
+    <h2>No movies in wishlist</h2>
+</div>
+<ng-template #elseBlock>
+    <div *ngIf="movieWishlist.length == 0">
+        <h2>No movies in wishlist</h2>
+    </div>
+</ng-template>

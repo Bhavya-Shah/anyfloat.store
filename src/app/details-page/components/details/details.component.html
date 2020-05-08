@@ -1,6 +1,91 @@
-<div *ngIf="book; else elseBlock">
-    {{book.id}}<br> {{book.name}}
+<div class="container-fluid position-relative">
+    <div class="w-100 px-5 py-5 shadow text-white section">
+        <div *ngIf="book; else elseBlock">
+            <div class="row pt-3">
+                <div class="col-md-3 col-lg-3">
+                    <!-- image and ratings only -->
+                    <img class="w-100 h-100" [src]="book.image" style="object-fit: cover;">
+                    <!-- <div class="form-group mt-3">
+                        <p>Ratings:&nbsp;&nbsp;&nbsp;{{book.ratings}}/5</p>
+                    </div> -->
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <!-- name author year preview only -->
+                    <h2 class="mb-0">{{book.name}}&nbsp;({{book.year}})</h2>
+                    <small>by&nbsp;<span>{{book.writer}}</span></small>
+                    <p class="mt-3 text-justify">{{book.preview}}</p>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <!-- another surface, price, genre, page, addtocart and addtowishlist buttons -->
+                    <div class="onSurface">
+                        <div class="d-flex flex-column py-3 mx-3">
+                            <div class="form-group">
+                                <p class="">Price:&nbsp;&nbsp;&#8377;&nbsp;{{book.price}}</p>
+                            </div>
+                            <div class="form-group">
+                                <p class="">Genre:&nbsp;&nbsp;&nbsp;{{book.genre}}</p>
+                            </div>
+                            <div class="form-group">
+                                <p class="">Pages:&nbsp;&nbsp;&nbsp;{{book.pages}}</p>
+                            </div>
+                            <div class="form-group">
+                                <p>Ratings:&nbsp;&nbsp;&nbsp;{{book.ratings}}/5</p>
+                            </div>
+                        </div>
+                        <div class="buttons d-flex flex-column align-items-center">
+                            <button class="btn btn-outline-warning rounded-0 mb-3" (click)="addToWishlist(book)">Add to wishlist</button>
+                            <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 mb-3" (click)="addToCart(book)">Add to cart</button>
+                            <ng-template #elseBlock>
+                                <button class="btn btn-danger rounded-0 btn-sm disabled" style="cursor: not-allowed;">Sold out item</button>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <div class="row pt-3">
+                <div class="col-md-3 col-lg-3">
+                    <!-- image and ratings only -->
+                    <img class="w-100 h-100" [src]="movie.image" style="object-fit: cover;">
+                    <!-- <div class="form-group mt-3">
+                        <p>Ratings:&nbsp;&nbsp;&nbsp;{{movie.ratings}}/5</p>
+                    </div> -->
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <!-- name author year preview only -->
+                    <h2 class="mb-0">{{movie.name}}&nbsp;({{movie.year}})</h2>
+                    <p><small>Directed by&nbsp;<span>{{movie.director}}</span></small></p>
+                    <a class="mt-3" [href]="movie.trailer" target="_blank">Click here to watch movie trailer</a>
+
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <!-- another surface, price, genre, page, addtocart and addtowishlist buttons -->
+                    <div class="onSurface">
+                        <div class="d-flex flex-column py-3 mx-3">
+                            <div class="form-group">
+                                <p class="">Price:&nbsp;&nbsp;&#8377;&nbsp;{{movie.price}}</p>
+                            </div>
+                            <div class="form-group">
+                                <p class="">Genre:&nbsp;&nbsp;&nbsp;{{movie.genre}}</p>
+                            </div>
+                            <div class="form-group">
+                                <p class="">Cast:&nbsp;&nbsp;&nbsp;{{movie.cast}}</p>
+                            </div>
+                            <div class="form-group">
+                                <p>IMDb ratings:&nbsp;&nbsp;&nbsp;{{movie.imdb}}/10</p>
+                            </div>
+                        </div>
+                        <div class="buttons d-flex flex-column align-items-center">
+                            <button class="btn btn-outline-warning rounded-0 mb-3" (click)="addToMovieWishlist(movie)">Add to wishlist</button>
+                            <button *ngIf="soldOut !=true; else elseBlock" class="btn btn-outline-primary rounded-0 mb-3" (click)="addToMovieCart(movie)">Add to cart</button>
+                            <ng-template #elseBlock>
+                                <button class="btn btn-danger rounded-0 btn-sm disabled" style="cursor: not-allowed;">Sold out item</button>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
 </div>
-<ng-template #elseBlock>
-    {{movie.id}}<br>{{movie.name}}
-</ng-template>

@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class BookListComponent implements OnInit, OnDestroy {
 
   books: Book[] = []
+  count: number = 0
   booksSub: Subscription
 
   constructor(private bookService: BookService) { }

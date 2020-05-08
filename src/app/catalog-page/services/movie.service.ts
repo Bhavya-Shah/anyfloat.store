@@ -7,14 +7,16 @@ import { Subject } from 'rxjs';
 })
 export class MovieService {
 
-  movies: Movie[] = []
-  movieChanged = new Subject<Movie[]>()
+  private movies: Movie[] = []
+  count: number = 0
+  moviesChanged = new Subject<Movie[]>()
 
   constructor() { }
 
   setMovies(movies: Movie[]) {
+    movies.forEach(item=>item.count = this.count)
     this.movies = movies
-    this.movieChanged.next(this.movies.slice())
+    this.moviesChanged.next(this.movies.slice()) 
   }
   
   getMovies(): Movie[]{

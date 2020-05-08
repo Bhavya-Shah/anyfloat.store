@@ -8,26 +8,16 @@ import { Subject } from 'rxjs';
 export class BookService {
 
   private books: Book[] = []
-  wishlist: Book[] = [];
-  wishlistChanged = new Subject<Book[]>();
-  // private cartItems: Book[] = []
-  // private wishlist: Book[] = []
+  count: number = 0
   booksChanged = new Subject<Book[]>()
-  // cartItemChanged = new Subject<Book[]>()
-  // wishlistChanged = new Subject<Book[]>()
 
   constructor() { }
 
   setBooks(books: Book[]){
+    books.forEach(item=>item.count = this.count)
     this.books = books
     this.booksChanged.next(this.books.slice()) 
   }
-
-  // setCart(book: Book){
-  //   let cartLength = this.cartItems.push(book)
-  //   console.log(cartLength)
-  //   this.cartItemChanged.next(this.cartItems.slice())
-  // }
 
   getBooks(): Book[]{
     return this.books.slice()
