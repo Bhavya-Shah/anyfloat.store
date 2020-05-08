@@ -1,6 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Book } from 'src/app/shared/models/book.model';
-import { WishlistService } from '../../services/wishlist.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-wishlist',
@@ -9,17 +7,10 @@ import { WishlistService } from '../../services/wishlist.service';
 })
 export class WishlistComponent implements OnInit {
 
-  wishlist: Book[]
+  title: string = "Wishlist" 
 
-  constructor(private wishlistService: WishlistService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    // this.wishlist = JSON.parse(localStorage.getItem("wishlist"))
-    // this.wishlistService.setWishlistFromLocalstorage(this.wishlist)
   }
-
-  // removeItem(book: Book) {
-  //   this.wishlist = this.wishlistService.removeFromWishlist(book)
-  //   console.log("Item removed successfully!")
-  // }
 }
