@@ -17,13 +17,17 @@ export class WishlistService {
   constructor() { }
 
   setBookWishlistFromLocalStorage(books: Book[]){
-    this.bookWishlist = books
-    this.bookWishlistChanged.next(this.bookWishlist.slice())
+    if(books!=null){
+      this.bookWishlist = books
+      this.bookWishlistChanged.next(this.bookWishlist.slice())
+    }
   }
 
   setMovieWishlistFromLocalStorage(movies: Movie[]){
-    this.movieWishlist = movies
-    this.movieWishlistChanged.next(this.movieWishlist.slice())
+    if(movies!=null){
+      this.movieWishlist = movies
+      this.movieWishlistChanged.next(this.movieWishlist.slice())
+    }
   }
 
   setBookWishlist(book:Book){
