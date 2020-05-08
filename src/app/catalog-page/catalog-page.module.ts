@@ -23,9 +23,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-  ],
-  // bootstrap:[CatalogComponent],
-  // providers: [CartService]
+  ]
 })
 
 export class CatalogPageModule{
