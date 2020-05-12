@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DetailsComponent } from './components/details/details.component';
 import { BookResolverService } from '../catalog-page/services/book-resolve.service';
 import { MovieResolverService } from '../catalog-page/services/movie-resolve.service';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes=[
     {path: 'book/:id', component: DetailsComponent, resolve: [BookResolverService]},
@@ -14,7 +15,8 @@ const routes: Routes=[
   declarations: [DetailsComponent],
   imports: [
     RouterModule.forChild(routes),   
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: []
 })

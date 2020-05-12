@@ -7,6 +7,7 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { BookItemComponent } from './components/book-list/book-item/book-item.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieItemComponent } from './components/movie-list/movie-item/movie-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {path: '', component: CatalogComponent}
@@ -22,7 +23,8 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 

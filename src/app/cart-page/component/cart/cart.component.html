@@ -1,41 +1,54 @@
-<div class="container-fluid position-relative">
-    <div class="w-100 px-5 py-3 shadow text-white section">
-        <h3 class="mb-3">{{title}}</h3>
+<div class="container-fluid position-relative animate__animated animate__fadeIn animate__fast">
+    <div class="w-100 px-5 py-4 text-white section">
+        <h3 class="mb-5">{{title}}</h3>
         <div class="pb-2 mb-3">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" style="overflow-y: auto; height: 90vh;">
                     <app-book-cart></app-book-cart>
                     <app-movie-cart></app-movie-cart>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 animate__animated animate__fadeInRightBig animate__faster animate__delay-1s">
                     <form class="form-surface" (ngSubmit)="onSubmit(user)" #user="ngForm">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input class="form-control rounded-0" type="text" name="name" id="name" minlength="3" placeholder="name" ngModel #name="ngModel" required>
+                            <small style="color: #cf6679;" *ngIf='name.touched == true && name.valid == false'>Minimum 3 characters required</small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input class="form-control rounded-0" type="email" name="email" id="email" placeholder="email" ngModel #email="ngModel" required>
+                            <input class="form-control rounded-0" type="email" name="email" id="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" placeholder="email" ngModel #email="ngModel" required>
+                            <small style="color: #cf6679;" *ngIf='email.touched == true && email.valid == false && email.dirty == true'>Enter valid email address</small>
+                            <small style="color: #cf6679;" *ngIf='email.touched == true && email.valid == false && email.pristine == true'>Required</small>
                         </div>
                         <div class="form-group">
                             <label for="upi">UPI Id</label>
-                            <input class="form-control rounded-0" type="text" name="upi" id="upi" placeholder="upi id" ngModel #upi="ngModel" required>
+                            <input class="form-control rounded-0" type="text" name="upi" id="upi" placeholder="upi id" pattern="^\w+@\w+$" ngModel #upi="ngModel" required>
+                            <small style="color: #cf6679;" *ngIf='upi.touched == true && upi.valid == false && upi.dirty == true'>Example - abc@upi</small>
+                            <small style="color: #cf6679;" *ngIf='upi.touched == true && upi.valid == false && upi.pristine == true'>Required</small>
                         </div>
                         <div class="form-group">
                             <label for="street">Street</label>
                             <input class="form-control rounded-0" type="text" name="street" id="street" minlength="3" placeholder="street" ngModel #street="ngModel" required>
+                            <small style="color: #cf6679;" *ngIf='street.touched == true && street.valid == false && street.dirty == true'>Minimum 3 characters required</small>
+                            <small style="color: #cf6679;" *ngIf='street.touched == true && street.valid == false && street.pristine==true'>Required</small>
                         </div>
                         <div class="form-group">
                             <label for="name">City</label>
                             <input class="form-control rounded-0" type="text" name="city" id="city" minlength="3" placeholder="city" ngModel #city="ngModel" required>
+                            <small style="color: #cf6679;" *ngIf='city.touched == true && city.valid == false && city.dirty==true'>Minimum 3 characters required</small>
+                            <small style="color: #cf6679;" *ngIf='city.touched == true && city.valid == false && city.pristine==true'>Required</small>
                         </div>
                         <div class="form-group">
                             <label for="zipcode">Zipcode</label>
-                            <input class="form-control rounded-0" type="number" name="zipcode" id="zipcode" minlength="5" maxlength="7" placeholder="zipcode" ngModel #zipcode="ngModel" required>
+                            <input class="form-control rounded-0" type="number" name="zipcode" id="zipcode" min="10000" max="999999" placeholder="zipcode" ngModel #zipcode="ngModel" required>
+                            <!-- <small style="color: #cf6679;" *ngIf='zipcode.touched == true && zipcode.valid == false && zipcode.dirty==true'>Length must be 5-8</small> -->
+                            <small style="color: #cf6679;" *ngIf='zipcode.touched == true && zipcode.valid == false && zipcode.pristine==true'>Required</small>
                         </div>
                         <div class="form-group">
                             <label for="country">Country</label>
                             <input class="form-control rounded-0" type="text" name="country" id="country" minlength="3" placeholder="country" ngModel #country="ngModel" required>
+                            <small style="color: #cf6679;" *ngIf='country.touched == true && country.valid == false && country.dirty==true'>Minimum 3 characters required</small>
+                            <small style="color: #cf6679;" *ngIf='country.touched == true && country.valid == false && country.pristine==true'>Required</small>
                         </div>
                         <div class="form-group text-right">
                             <input class="btn rounded-0" type="submit" value="submit">
@@ -45,4 +58,5 @@
             </div>
         </div>
     </div>
+    <app-alert class="position-absolute" style="top: 25px; right: 60px"></app-alert>
 </div>

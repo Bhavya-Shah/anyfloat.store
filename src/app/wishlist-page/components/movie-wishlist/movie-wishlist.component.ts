@@ -3,6 +3,7 @@ import { Movie } from 'src/app/catalog-page/models/movie.model';
 import { WishlistService } from '../../services/wishlist.service';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/cart-page/services/cart.service';
+import { AlertService } from 'src/app/shared/services/alert.service';
 
 @Component({
   selector: 'app-movie-wishlist',
@@ -14,7 +15,8 @@ export class MovieWishlistComponent implements OnInit {
   movieWishlist: Movie[]
   constructor(private wishlistService: WishlistService,
               private router: Router,
-              private cartService: CartService) { }
+              private cartService: CartService,
+              private alertService: AlertService) { }
 
   ngOnInit(): void {
     this.movieWishlist = this.wishlistService.getMovieWishlist()
@@ -52,7 +54,11 @@ export class MovieWishlistComponent implements OnInit {
   }
   
   removeItem(movie: Movie) {
+    this.alertService.clear()
     this.movieWishlist = this.wishlistService.removeFromMovieWishlist(movie)
-    console.log("Item removed successfully!")
+    this.alertService.success('Movie removed from wishlist', true)
+    setTimeout(() => {
+      this.alertService.end('Movie removed from wishlist', false)
+    }, 1000);
   }
 }

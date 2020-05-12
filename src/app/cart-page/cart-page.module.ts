@@ -5,6 +5,7 @@ import { CartComponent } from './component/cart/cart.component';
 import { MovieCartComponent } from './component/movie-cart/movie-cart.component';
 import { BookCartComponent } from './component/book-cart/book-cart.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {path: '', component: CartComponent}
@@ -18,7 +19,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class CartPageModule { }

@@ -1,11 +1,23 @@
 $surface-color: rgba(255,255,255,0.05)
 $onSurface-color: rgba(255,255,255,0.06)
 
+small, p
+    opacity: 0.40
+
 .section
     background-color: $surface-color
     margin-top: 2rem
 
+.section img
+    object-fit: cover
+
+.section h2
+    opacity: 0.87
+
 .onSurface
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     background-color: $onSurface-color
 
 .buttons
@@ -15,9 +27,7 @@ $onSurface-color: rgba(255,255,255,0.06)
     cursor: pointer
 
 .buttons .btn
-    width: 80%
+    width: 100%
 
 .form-group p
     margin: 0
-
-    

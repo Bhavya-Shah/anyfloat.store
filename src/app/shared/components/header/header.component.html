@@ -1,11 +1,15 @@
-<div class="container-fluid shadow header animated fadeIn faster">
-    <!-- <div class="container h-100"> -->
-    <div class="d-flex h-100 align-items-center justify-content-between">
-        <a class="p-0" [routerLink]="['/']"><span class="text-white" style="font-size: 1.2rem;">{{title}}</span></a>
-        <div class="navigationLink">
-            <a [routerLink]="['/wishlist']" class="text-white">Wishlist</a>
-            <a [routerLink]="['/cart']" class="ml-3 text-white">Cart</a>
+<div class="container-fluid shadow header animate__animated animate__fadeIn animate__faster">
+    <div class="row h-100 align-items-center px-5 justify-content-between">
+        <div class="col-12 col-md-8">
+            <a class="p-0" [routerLink]="['/']">
+                <span class="text-white">{{title}}</span>
+            </a>
+        </div>
+        <div class="col-12 col-md-2">
+            <div class="navigationLink">
+                <a [routerLink]="['/wishlist']" routerLinkActive="router-link-active" class="text-white">Wishlist</a>
+                <a [routerLink]="['/cart']" routerLinkActive="router-link-active" class="ml-3 text-white">Cart</a>
+            </div>
         </div>
     </div>
-    <!-- </div> -->
 </div>

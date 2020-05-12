@@ -1,4 +1,8 @@
 $surface-color: rgba(255,255,255,0.16)
+$span-color: rgb(42, 157, 144)
+$span-hover-color: rgb(42,157,144,0.8)
+$navigation-color: rgb(148,0,211)
+$navigation-hover-color:  rgb(148, 0, 211, 0.8)
 
 .header
     height: 10vh
@@ -6,15 +10,18 @@ $surface-color: rgba(255,255,255,0.16)
 
 .header span
     font-size: 1.2rem
-    background-color: rgb(42, 157, 144)
+    background-color: $span-color
     padding: 0 8px
 
 .header span:hover
-    background-color: rgb(42,157,144,0.8)
+    background-color: $span-hover-color
 
 .navigationLink a
-    background-color: darkviolet
-    padding: 0 4px
+    background-color: $navigation-color
+    padding: 0 8px
 
 .navigationLink a:hover
-    background-color: rgb(148, 0, 211, 0.8)
+    background-color: $navigation-hover-color
+
+.router-link-active
+    background-color: $navigation-hover-color !important

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+import { AuthGuardService } from './checkout-page/services/auth-guard.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { AppComponent } from './app.component';
     // NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

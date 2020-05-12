@@ -1,17 +1,24 @@
-<div *ngFor="let movie of movies">
-    <div *ngIf="movie.count>0">
-        <div class="row mb-4">
-            <div class="col-12 col-sm-6 col-md-10">
-                <h5 class="m-0">{{movie.name}}({{movie.year}})</h5>
-                <small>by {{movie.director}}</small><br><br>
-                <p class="m-0">Type: Movie</p>
-                <p class="m-0">Genre: {{movie.genre}}</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-2 text-right">
-                <h4>&#8377;&nbsp;&nbsp;{{movie.price}}</h4>
-                <p>Qty:{{movie.count}}</p>
-                <button class="btn btn-outline-danger btn-sm" (click)="removeItem(movie)">Remove</button>
+<div *ngIf="movies.length != 0; else elseBlock" class="animate__animated animate__fadeInUpBig">
+    <div *ngFor="let movie of movies">
+        <div *ngIf="movie.count>0">
+            <div class="row mb-4">
+                <div class="col-12 col-sm-6 col-md-8">
+                    <h5 class="m-0">{{movie.name}}&nbsp;({{movie.year}})</h5>
+                    <small>by {{movie.director}}</small><br><br>
+                    <p class="m-0">Type: Movie</p>
+                    <p class="m-0">Genre: {{movie.genre}}</p>
+                </div>
+                <div class="mt-2 mt-sm-0 col-12 col-sm-6 col-md-4 text-right">
+                    <h4>&#8377;&nbsp;&nbsp;{{movie.price}}</h4>
+                    <p>Qty:&nbsp;{{movie.count}}</p>
+                    <button class="btn btn-outline-danger btn-sm" (click)="removeItem(movie)">Remove</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<ng-template #elseBlock>
+    <div class="row mb-4">
+        <h4>No movies in cart</h4>
+    </div>
+</ng-template>

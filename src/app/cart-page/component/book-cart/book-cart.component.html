@@ -1,17 +1,24 @@
-<div *ngFor="let book of books">
-    <div *ngIf="book.count>0">
-        <div class="row mb-4">
-            <div class="col-12 col-sm-6 col-md-10">
-                <h5 class="m-0">{{book.name}}({{book.year}})</h5>
-                <small>by {{book.writer}}</small><br><br>
-                <p class="m-0">Type: Book</p>
-                <p class="m-0">Genre: {{book.genre}}</p>
-            </div>
-            <div class="col-12 col-sm-6 col-md-2 text-right">
-                <h4>&#8377;&nbsp;&nbsp;{{book.price}}</h4>
-                <p>Qty:{{book.count}}</p>
-                <button class="btn btn-outline-danger btn-sm" (click)="removeItem(book)">Remove</button>
+<div *ngIf="books.length != 0; else elseBlock" class="animate__animated animate__fadeInUpBig">
+    <div *ngFor="let book of books">
+        <div *ngIf="book.count>0;">
+            <div class="row mb-4">
+                <div class="col-12 col-sm-6 col-md-8">
+                    <h5 class="m-0">{{book.name}}&nbsp;({{book.year}})</h5>
+                    <p style="font-size: smaller;">by {{book.writer}}</p>
+                    <p class="m-0">Type: Book</p>
+                    <p class="m-0">Genre: {{book.genre}}</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 text-right">
+                    <h4>&#8377;&nbsp;&nbsp;{{book.price}}</h4>
+                    <p>Qty:&nbsp;{{book.count}}</p>
+                    <button class="btn btn-outline-danger btn-sm" (click)="removeItem(book)">Remove</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<ng-template #elseBlock>
+    <div class="row mb-4">
+        <h4>No books in cart</h4>
+    </div>
+</ng-template>

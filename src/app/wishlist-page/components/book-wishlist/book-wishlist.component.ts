@@ -3,6 +3,7 @@ import { Book } from 'src/app/shared/models/book.model';
 import { WishlistService } from '../../services/wishlist.service';
 import { CartService } from 'src/app/cart-page/services/cart.service';
 import { Router } from '@angular/router';
+import { AlertService } from 'src/app/shared/services/alert.service';
 
 @Component({
   selector: 'app-book-wishlist',
@@ -14,7 +15,8 @@ export class BookWishlistComponent implements OnInit {
   bookWishlist: Book[]
   constructor(private wishlistService: WishlistService, 
               private cartService: CartService,
-              private router: Router) { }
+              private router: Router,
+              private alertService: AlertService) { }
 
   ngOnInit(): void {
     this.bookWishlist = this.wishlistService.getBookWishlist()
@@ -52,7 +54,11 @@ export class BookWishlistComponent implements OnInit {
   }
 
   removeItem(book: Book) {
+    this.alertService.clear()
     this.bookWishlist = this.wishlistService.removeFromBookWishlist(book)
-    console.log("Item removed successfully!")
+    this.alertService.success('Book removed from wishlist', true)
+    setTimeout(()=>{
+      this.alertService.end('Book removed from wishlist', false)
+    }, 1000)
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,9 +11,9 @@ import { Router } from '@angular/router';
 export class CartComponent implements OnInit {
 
   title:string = "Cart"
-  user: Object
+  user: any
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
   }
@@ -21,13 +22,11 @@ export class CartComponent implements OnInit {
     if(user.valid)
     {
       this.user = user.value
-      localStorage.setItem("userDetails",JSON.stringify(this.user))
-      //checkoutservice me store user in a variable of type ngForm
-      // also store in local variable
+      this.cartService.setUser(this.user)
       this.router.navigate(['/checkout'])
     }
     else{
-      console.log("something went wrong!")
+      console.log("User Details are inncorrect!")
     }
   }
 

@@ -1,13 +1,14 @@
-<div class="container-fluid">
-    <div class="w-100 px-5 py-3 shadow text-white section">
-        <h3 class="mb-3">{{title}}</h3>
+<div class="container-fluid position-relative">
+    <div class="w-100 px-5 py-4 text-white section">
+        <h3 class="mb-5">{{title}}</h3>
         <h5>Books</h5>
-        <div class="pb-2 mb-3">
+        <div class="py-2 mb-3">
             <app-book-wishlist></app-book-wishlist>
         </div>
-        <h5>Movies</h5>
-        <div class="pb-2 mb-3">
+        <h5 class="mt-5">Movies</h5>
+        <div class="py-2 mb-3">
             <app-movie-wishlist></app-movie-wishlist>
         </div>
     </div>
+    <app-alert class="position-absolute" style="top: 25px; right: 60px"></app-alert>
 </div>

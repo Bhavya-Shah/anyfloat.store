@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Book } from 'src/app/shared/models/book.model';
 import { Subject, BehaviorSubject, Observable } from 'rxjs';
 import { Movie } from 'src/app/catalog-page/models/movie.model';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,16 @@ export class CartService {
   private movieCartItems: Movie[] = []
   private remainingMovieQuantity: number
   private movieCount: number
+  private userObj: any
+  private totalPrice: number = 0
 
   bookCartItemChanged: Subject<Book[]> = new Subject<Book[]>()
   remainingBookQuantityChanged: BehaviorSubject<number>  = new BehaviorSubject<number>(0)
   bookCountChanged:BehaviorSubject<number> = new BehaviorSubject<number>(0)
   movieCartItemChanged:Subject<Movie[]> = new Subject<Movie[]>()
   remainingMovieQuantityChanged:BehaviorSubject<number> = new BehaviorSubject<number>(0)
-  movieCountChanged:BehaviorSubject<number> = new BehaviorSubject<number>(0) 
+  movieCountChanged:BehaviorSubject<number> = new BehaviorSubject<number>(0)
+  userObjChanged: any = new Subject<any>()
 
   constructor() { }
 
@@ -92,5 +96,24 @@ export class CartService {
 
   getMovieCount():number{
     return this.movieCount
+  }
+
+  setUser(user: any) {
+    this.userObj = user
+    this.userObjChanged.next(this.userObj)
+  }
+
+  getUser(): any{
+    return this.userObj
+  }
+
+  calculatePrice(): number{
+    this.bookCartItems.forEach(items =>{
+      this.totalPrice = this.totalPrice + items.count * items.price
+    })
+    this.movieCartItems.forEach(items=>{
+      this.totalPrice = this.totalPrice + items.count * items.price
+    }) 
+    return this.totalPrice
   }
 }

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { BookWishlistComponent } from './components/book-wishlist/book-wishlist.component';
 import { MovieWishlistComponent } from './components/movie-wishlist/movie-wishlist.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes=[
   {path: '', component: WishlistComponent}
@@ -16,7 +17,8 @@ const routes: Routes=[
 
   imports: [
     RouterModule.forChild(routes),   
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class WishlistPageModule { }
