@@ -4,7 +4,6 @@ import { Movie } from 'src/app/catalog-page/models/movie.model';
 import { CartService } from 'src/app/cart-page/services/cart.service';
 import { AlertService } from 'src/app/shared/services/alert.service';
 import { Router } from '@angular/router';
-import { window } from 'rxjs/operators';
 
 @Component({
   selector: 'app-checkout',
