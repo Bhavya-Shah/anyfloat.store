@@ -9,7 +9,8 @@
         "director": "David Fincher",
         "imdb": "8.2",
         "trailer": "https://www.youtube.com/watch?v=hZpm1zj9510",
-        "cast": "Morgan Freeman, Brad Pitt"
+        "cast": "Morgan Freeman, Brad Pitt",
+        "description": "Bonnie and Clyde is a 1967 American biographical crime film directed by Arthur Penn and starring Warren Beatty and Faye Dunaway as the title characters Clyde Barrow and Bonnie Parker. The film also features Michael J. Pollard, Gene Hackman, and Estelle Parsons."
     },
     {
         "id": 2,
@@ -22,7 +23,8 @@
         "director": "Quentin Tarantino",
         "imdb": "9.3",
         "trailer": "https://www.youtube.com/watch?v=vayksn4Y93A",
-        "cast": "Harvey Keitel, Tim Roth, Chris Penn, SteveBuscemi, Lawrence Tierney, Michael Madsen"
+        "cast": "Harvey Keitel, Tim Roth, Chris Penn, SteveBuscemi, Lawrence Tierney, Michael Madsen",
+        "description": "DescriptionSix criminals, hired to steal diamonds, do not know each other's true identity. While attempting the heist, the police ambushes them, leading them to believe that one of them is an undercover officer."
     },
     {
         "id": 3,
@@ -35,7 +37,8 @@
         "director": "David Lean",
         "imdb": "7.3",
         "trailer": "https://www.youtube.com/watch?v=CGGr21PilKY",
-        "cast": " Omar Sharif, Julie Christie"
+        "cast": " Omar Sharif, Julie Christie",
+        "description": "Covers behind-the-scenes shots during the making of David Lean's 'Doctor Zhivago' (1965), which is based on the novel, 'Doctor Zhivago' written by Boris Pasternak."
     },
     {
         "id": 4,
@@ -48,7 +51,8 @@
         "director": "John G. Avildsen",
         "imdb": "8.2",
         "trailer": "https://www.youtube.com/watch?v=7RYpJAUMo2M",
-        "cast": "Sylvester Stallone, Talia Shire, Burt Young, Burgess Meredith, Carl Weathers"
+        "cast": "Sylvester Stallone, Talia Shire, Burt Young, Burgess Meredith, Carl Weathers",
+        "description": "Rocky Balboa, a small-time boxer, gets a chance to fight heavyweight champion Apollo Creed. In a bid to earn respect and glory, Rocky jumps into the ring, unaware of the tough task ahead of him."
     },
     {
         "id": 5,
@@ -61,7 +65,8 @@
         "director": "Mel Gibson",
         "imdb": "9.4",
         "trailer": "https://www.youtube.com/watch?v=1NJO0jxBtMo",
-        "cast": "Mel Gibson, Sophie Marceau, Patrick McGoohan"
+        "cast": "Mel Gibson, Sophie Marceau, Patrick McGoohan",
+        "description": "William Wallace, a Scottish rebel, along with his clan, sets out to battle King Edward I of England, who killed his bride a day after their marriage."
     },
     {
         "id": 6,
@@ -74,7 +79,8 @@
         "director": "David Fincher",
         "imdb": "9.7",
         "trailer": "https://www.youtube.com/watch?v=znmZoVkCjpI",
-        "cast": "Morgan Freeman, Brad Pitt"
+        "cast": "Morgan Freeman, Brad Pitt",
+        "description": "DescriptionA serial killer begins murdering people according to the seven deadly sins. Two detectives, one new to the city and the other about to retire, are tasked with apprehending the criminal."
     },
     {
         "id": 7,
@@ -87,7 +93,8 @@
         "director": "Francis Ford Coppola",
         "imdb": "9.2",
         "trailer": "https://www.youtube.com/watch?v=sY1S34973zA",
-        "cast": "Marlon Brando, Al Pacino, James Caan, Robert Duvall, Diane Keaton, Talia Shire"
+        "cast": "Marlon Brando, Al Pacino, James Caan, Robert Duvall, Diane Keaton, Talia Shire",
+        "description": "DescriptionDon Vito Corleone, head of a mafia family, decides to handover his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger."
     },
     {
         "id": 8,
@@ -100,7 +107,8 @@
         "director": "Victor Fleming",
         "imdb": "7.3",
         "trailer": "https://www.youtube.com/watch?v=H_3T4DGw10U",
-        "cast": "Judy Garland, Frank Morgan, Ray Bolger, Bert Lahr, Jack Haley"
+        "cast": "Judy Garland, Frank Morgan, Ray Bolger, Bert Lahr, Jack Haley",
+        "description": "When a tornado rips through Kansas, Dorothy (Judy Garland) and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard, and en route they meet a Scarecrow (Ray Bolger) that needs a brain, a Tin Man"
     },
     {
         "id": 9,
@@ -113,7 +121,8 @@
         "director": "Frank Darabont",
         "imdb": "8.0",
         "trailer": "https://www.youtube.com/watch?v=6hB3S9bIaco",
-        "cast": "Tim Robbins, Morgan Freeman"
+        "cast": "Tim Robbins, Morgan Freeman",
+        "description": "Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, and is sentenced to life imprisonment at the Shawshank prison. He becomes the most unconventional prisoner."
     },
     {
         "id": 10,
@@ -126,7 +135,8 @@
         "director": "Robert Zemeckis",
         "imdb": "9.4",
         "trailer": "https://www.youtube.com/watch?v=qvsgGtivCgs",
-        "cast": "Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover"
+        "cast": "Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover",
+        "description": "Marty travels back in time using an eccentric scientist's time machine. However, he must make his high-school-aged parents fall in love in order to return to the present."
     },
     {
         "id": 11,
@@ -139,7 +149,8 @@
         "director": "Ridley Scott",
         "imdb": "8.8",
         "trailer": "https://www.youtube.com/watch?v=eogpIG53Cis",
-        "cast": "Harrison Ford, Rutger Hauer, Sean Young"
+        "cast": "Harrison Ford, Rutger Hauer, Sean Young",
+        "description": "Rick Deckard, an ex-policeman, becomes a special agent with a mission to exterminate a group of violent androids. As he starts getting deeper into his mission, he questions his own identity."
     },
     {
         "id": 12,
@@ -152,7 +163,8 @@
         "director": "Stanley Kubrick",
         "imdb": "8.2",
         "trailer": "https://www.youtube.com/watch?v=5Cb3ik6zP2I",
-        "cast": "Jack Nicholson, Shelley Duvall"
+        "cast": "Jack Nicholson, Shelley Duvall",
+        "description": "Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members."
     },
     {
         "id": 13,
@@ -165,7 +177,8 @@
         "director": "David Fincher",
         "imdb": "9.5",
         "trailer": "https://www.youtube.com/watch?v=qtRKdVHc-cE",
-        "cast": "Brad Pitt, Edward Norton, Helena Bonham Carter"
+        "cast": "Brad Pitt, Edward Norton, Helena Bonham Carter",
+        "description": "Discontented with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. The project soon spirals down into something sinister."
     },
     {
         "id": 14,
@@ -178,7 +191,8 @@
         "director": " John Lasseter",
         "imdb": "7.1",
         "trailer": "https://www.youtube.com/watch?v=rNk1Wi8SvNc",
-        "cast": "Tom Hanks, Tim Allen"
+        "cast": "Tom Hanks, Tim Allen",
+        "description": "Toy Story is a Disney media franchise that commenced in 1995 with the release of the animated feature film of the same name, produced by Pixar Animation Studios and released by Walt Disney Pictures."
     },
     {
         "id": 15,
@@ -191,7 +205,8 @@
         "director": "Andy and Lana Wachowski",
         "imdb": "9.6",
         "trailer": "https://www.youtube.com/watch?v=m8e-FF8MsqU",
-        "cast": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss"
+        "cast": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+        "description": "Thomas Anderson, a computer programmer, is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix."
     },
     {
         "id": 16,
@@ -204,7 +219,8 @@
         "director": "James Cameron",
         "imdb": "9.9",
         "trailer": "https://www.youtube.com/watch?v=kVrqfYjkTdQ",
-        "cast": "Leonardo DiCaprio, Kate Winslet"
+        "cast": "Leonardo DiCaprio, Kate Winslet",
+        "description": "Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him."
     },
     {
         "id": 17,
@@ -217,7 +233,8 @@
         "director": "Steven Spielberg",
         "imdb": "8.8",
         "trailer": "https://www.youtube.com/watch?v=lc0UehYemQA",
-        "cast": "Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough"
+        "cast": "Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough",
+        "description": "John Hammond, an entrepreneur, opens a wildlife park containing cloned dinosaurs. However, a breakdown of the island's security system causes the creatures to escape and bring about chaos."
     },
     {
         "id": 18,
@@ -230,7 +247,8 @@
         "director": "Andrew Stanton",
         "imdb": "8.2",
         "trailer": "https://www.youtube.com/watch?v=qGBZWbg_26A",
-        "cast": "Ben Burtt, Elissa Knight, Jeff Garlin"
+        "cast": "Ben Burtt, Elissa Knight, Jeff Garlin",
+        "description": "DescriptionA machine responsible for cleaning a waste-covered Earth meets another robot and falls in love with her. Together, they set out on a journey that will alter the fate of mankind."
     },
     {
         "id": 19,
@@ -243,7 +261,8 @@
         "director": "Christopher Nolan",
         "imdb": "9.1",
         "trailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
-        "cast": "Christian Bale, Heath Ledger"
+        "cast": "Christian Bale, Heath Ledger",
+        "description": "After Gordon, Dent and Batman begin an assault on Gotham's organised crime, the mobs hire the Joker, a psychopathic criminal mastermind who wants to bring all the heroes down to his level."
     },
     {
         "id": 20,
@@ -256,7 +275,8 @@
         "director": "Roger Allers, Rob Minkoff",
         "imdb": "7.1",
         "trailer": "https://www.youtube.com/watch?v=hY7xBISLBIA",
-        "cast": "Matthew Broderick, Jeremy Irons, James Earl Jones "
+        "cast": "Matthew Broderick, Jeremy Irons, James Earl Jones ",
+        "description": "Simba, a young lion prince, flees his kingdom after the murder of his father, Mufasa. Years later, a chance encounter with Nala, a lioness, causes him to return and take back what is rightfully his."
     },
     {
         "id": 21,
@@ -269,7 +289,8 @@
         "director": " M. Night Shyamalan ",
         "imdb": "6.7",
         "trailer": "https://www.youtube.com/watch?v=95ghQs5AmNk",
-        "cast": "James McAvoy, Bruce Willis, Samuel L. Jackson, Anya Taylor-Joy"
+        "cast": "James McAvoy, Bruce Willis, Samuel L. Jackson, Anya Taylor-Joy",
+        "description": "David Dunn tries to stay one step ahead of the law while delivering vigilante justice on the streets of Philadelphia. His special talents soon put him on a collision course with the Beast -- the psychotic madman who has superhuman strength and 23 distinct personalities. "
     },
     {
         "id": 22,
@@ -282,7 +303,8 @@
         "director": "Christopher Landon",
         "imdb": "6.2",
         "trailer": "https://www.youtube.com/watch?v=THq6KlWgiqw",
-        "cast": "Jessica Rothe, Israel Broussard, Phi Vu, Suraj Sharma"
+        "cast": "Jessica Rothe, Israel Broussard, Phi Vu, Suraj Sharma",
+        "description": "Tree is stuck in a time loop where she keeps reliving her last day over and over again. When it starts happening to her friends as well, she decides to put an end to it."
     },
     {
         "id": 23,
@@ -295,7 +317,8 @@
         "director": "Anna Boden, Ryan Fleck",
         "imdb": "6.9",
         "trailer": "https://www.youtube.com/watch?v=Z1BCujX3pw8",
-        "cast": "Brie Larson, Samuel L. Jackson, Ben Mendelsohn, Jude Law"
+        "cast": "Brie Larson, Samuel L. Jackson, Ben Mendelsohn, Jude Law",
+        "description": "Amidst a mission, Vers, a Kree warrior, gets separated from her team and is stranded on Earth. However, her life takes an unusual turn after she teams up with Fury, a S.H.I.E.L.D. agent."
     },
     {
         "id": 24,
@@ -308,7 +331,8 @@
         "director": "Rob Letterman",
         "imdb": "6.6",
         "trailer": "https://www.youtube.com/watch?v=1roy4o4tqQM",
-        "cast": "Ryan Reynolds, Justice Smith, Kathryn Newton, Bill Nighy"
+        "cast": "Ryan Reynolds, Justice Smith, Kathryn Newton, Bill Nighy",
+        "description": "After the demise of his father, Tim travels to Ryme city where he runs into his father's Pokemon partner, Pikachu. They team up and try to work on the case left unfinished by Tim's father."
     },
     {
         "id": 25,
@@ -321,6 +345,7 @@
         "director": "Guy Ritchie",
         "imdb": "7",
         "trailer": "https://www.youtube.com/watch?v=foyufD52aog",
-        "cast": "Guy Ritchie, Mena Massoud, Naomi Scott, Marwan Kenzari"
+        "cast": "Guy Ritchie, Mena Massoud, Naomi Scott, Marwan Kenzari",
+        "description": "Aladdin is a lovable street urchin who meets Princess Jasmine, the beautiful daughter of the sultan of Agrabah. While visiting her exotic palace, Aladdin stumbles upon a magic oil lamp that unleashes a powerful, wisecracking, larger-than-life genie. As Aladdin and the genie start to become friends"
     }
 ]

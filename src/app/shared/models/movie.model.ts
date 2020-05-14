@@ -11,5 +11,6 @@ export class Movie {
     public trailer: string
     public cast: string
     public count: number
+    public description: string
 }
 
